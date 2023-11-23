@@ -117,3 +117,55 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 
 ## Answers
 Please write your answers here
+
+1.  b
+2.  c
+3.  d
+4.  b
+5.  a
+6.  c
+7.  a
+8.  a
+9.  d
+10.  b   
+11.  c
+
+12. -->UNUSED: The process is not in use and is available for allocation. 
+    -->EMBRYO: The process is in the process of being created but has not yet been fully initialized.
+    -->SLEEPING: The process is waiting for some event to occur, such as the completion of I/O or the expiration of a timer. 
+    -->RUNNABLE: The process is ready to run but is not currently executing. 
+    -->RUNNING: The process is currently being executed on the CPU.
+    -->ZOMBIE: The process has completed its execution, but its parent has not yet collected its exit status.
+
+13. 6 layers in File sytsem
+    --> Systems calls
+    --> Pathnames
+    --> directories
+    --> files
+    --> transactions
+    --> blocks
+
+    At the lowest layer are data blocks. Blocks are the basic unit of storage on a disk.
+    Transactions provide a way to group multiple operations into a single atomic operation.
+    The file layer manages the organization and storage of user data. Each file has a specific structure and is associated with metadata (attributes like permissions, timestamps, etc.).
+    Directories organize files hierarchically. They contain entries that map names to inodes (file identifiers).
+    Pathnames are strings that represent the location of a file within the file system hierarchy.
+    The system calls layer serves as the interface between user-level applications and the kernel. 
+
+ 
+14. It makes a system call to the os when it wants to do something, like open a file. The library functions are more complex functions that make our lives easier. Most of the time, they come after system calls. Open() is a system call, while fopen() is a library method. 
+
+15. Virtual memory is split into pages of a certain size, and real memory is split into frames that are the same size. It's smart to use memory for paging, keeps tasks separate, and lets you do things like demand paging.
+
+16. ls: Lists the files in the current directory.
+    cp: Copies files or directories.
+    rm: Removes (deletes) files or directories.
+
+17. Synchronization of processes is used to keep many processes going smoothly and trouble-free. In XV6, locks and semaphores are used to keep shared resources from being used by too many people at once and to stop races. 
+
+18. Interrupts are events that make the CPU temporarily hand over control to a different piece of code. ISRs, or interrupt service routines, handle events in XV6.
+
+19. Virtual memory makes a "idealized abstraction" of your computer's storage resources when you use it to control your memory. XV6 makes virtual memory with swapping. It is easy to write programs and good use of memory when processes are kept separate.
+
+20. The BIOS or UEFI software sets up the hardware, loads the bootloader (like GRUB), and then loads the XV6 kernel into memory. The kernel then takes over, sets up the data structures it needs, and starts the process of setup. It goes to the user area and starts the shell in the end.
+     
