@@ -165,7 +165,7 @@ Please write your answers here
 
 18. Interrupts are events that make the CPU temporarily hand over control to a different piece of code. ISRs, or interrupt service routines, handle events in XV6.
 
-19. Virtual memory makes a "idealized abstraction" of your computer's storage resources when you use it to control your memory. XV6 makes virtual memory with swapping. It is easy to write programs and good use of memory when processes are kept separate.
+19. Virtual memory is an illusion of a bigger memory. Virtual memory makes a "idealized abstraction" of your computer's storage resources when you use it to control your memory. XV6 makes virtual memory with swapping. It is easy to write programs and good use of memory when processes are kept separate.
 
 20. The BIOS or UEFI software sets up the hardware, loads the bootloader (like GRUB), and then loads the XV6 kernel into memory. The kernel then takes over, sets up the data structures it needs, and starts the process of setup. It goes to the user area and starts the shell in the end.
      
